@@ -1,0 +1,33 @@
+h1{
+	color: orange;
+}
+html,body,nav {
+	height: 100%;
+}
+#menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a:link, a:visited {
+	display: block;
+	font-weight: bold;
+	color: white;
+	background-color: brown;
+	width: 120px;
+	text-align: center;
+	padding: 4px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+a:hover {
+	background: black;
+}
+#lineMaker {
+	border-right: 6px solid black;
+	height: 100%;
+	background-color: brown;
+	float: left;
+}
