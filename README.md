@@ -1,2 +1,2 @@
 # likeLion
-my web design &amp; programming circle activity.
+codes from university web design & programming study circle "LikeLion"
