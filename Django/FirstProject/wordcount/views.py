@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import operator
 
 # Create your views here.
 
@@ -14,10 +15,14 @@ def result(request):
     wordQuantity = len(words)
     wordDictionary = {}
 
+    while '' in words:
+        words.remove('')
+
     for word in words:
         if word in wordDictionary:
             wordDictionary[word]+=1
         else:
             wordDictionary[word]=1
 
-    return render(request, 'result.html', {'fulltext':text, "words":words, "wq":wordQuantity, "wordCount":wordDictionary.items()}) #text를 담어 같이 전송
+    wordCount = sorted(wordDictionary.items(), key=operator.itemgetter(1), reverse=True)#나온 횟수에 따라 정렬
+    return render(request, 'result.html', {'fulltext':text, "words":words, "wq":wordQuantity, "wordCount":wordCount}) #text를 담어 같이 전송
