@@ -7,4 +7,4 @@
  - Sort the word list pending how often the word used
  
  - 빈 단어는 세지 않음
- - 단어가 사용된 횟수에 따라 내림차순 
+ - 단어가 사용된 횟수에 따라 내림차순 정렬
