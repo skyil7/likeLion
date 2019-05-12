@@ -14,6 +14,8 @@
     {{fulltext}}
     <h2>단어 카운트 : </h2>
     <!-- '단어' - '단어가 나온 회수' -->
-    {{ wordCount }}
+    {%for word, count in wordCount%}
+    {{ word }} : {{ count }}<br>
+    {% endfor %}
 </body>
 </html>
