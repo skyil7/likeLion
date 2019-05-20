@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Articles</title>
+</head>
+<body>
+    {% for arti in articles.all %}
+    <h1>{{ arti.title }}</h1>
+    <p>{{ arti.pub_date }}</p>
+    <p>{{ arti.body }}</p>
+    <br><br>
+    {% endfor %}
+</body>
+</html>
