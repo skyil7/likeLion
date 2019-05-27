@@ -1,8 +1,14 @@
 from selenium import webdriver
 import time
 
+#Chrome Headless option
+options = webdriver.ChromeOptions()
+options.add_argument('headless')
+options.add_argument('window-size=1920x1080')
+options.add_argument("disable-gpu")
+
 #크롬 드라이버로 크롤러 객체 설정
-driver = webdriver.Chrome('chromedriver.exe')
+driver = webdriver.Chrome('chromedriver.exe', chrome_options=options)
 driver.get('https://www.acmicpc.net/login?next=%2F')
 time.sleep(0.5)
 
