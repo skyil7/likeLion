@@ -7,3 +7,6 @@ class article(models.Model):
 
     def __str__(self):
         return self.title
+
+    def summary(self):
+        return self.body[:50]#50자 까지 자르기

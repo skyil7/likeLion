@@ -8,7 +8,7 @@
     {% for arti in articles.all %}
     <h1>{{ arti.title }}</h1>
     <p>{{ arti.pub_date }}</p>
-    <p>{{ arti.body }}</p>
+    <p>{{ arti.summary }}<a href="{% url 'detail' blog.id %}">...more</a></p>
     <br><br>
     {% endfor %}
 </body>
